@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+# Скрипт для запуска pre-commit хука
 
 echo "Start precommit script"
 
