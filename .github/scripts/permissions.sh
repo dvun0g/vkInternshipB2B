@@ -3,6 +3,6 @@
 
 echo "Start permissions script"
 
-chmod +x ./linters.sh
-chmod +x ./build.sh
-chmod +x ./installDependencies.sh
+chmod +x .github/scripts/linters.sh
+chmod +x .github/scripts/build.sh
+chmod +x .github/scripts/installDependencies.sh
