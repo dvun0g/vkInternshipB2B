@@ -1,0 +1,61 @@
+name: build frontend
+
+on:
+    push:
+        branches:
+            - trunk
+            - develop
+            - release
+    pull_request:
+        branches:
+            - trunk
+            - develop
+            - release
+
+env:
+    PATH_PERMISSIONS_SCRIPT: .github/scripts/permissions.sh
+    PATH_INSTALL_DEPS_SCRIPT: .github/scripts/installDependencies.sh
+    PATH_LINTERS_SCRIPT: .github/scripts/linters.sh
+    PATH_BUILD_SCRIPT: .github/scripts/build.sh
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            # Получаем код из репозитория github
+            - name: Git repository code
+              id: git
+              uses: actions/checkout@v3
+
+            # Устанавливаем NodeJS
+            - name: Install NodeJS
+              id: node
+              uses: actions/setup-node@v3
+              with:
+                  node_version: 18.x
+
+            # Даем разрешение выполнять скриптам
+            - name: Permissions Scripts
+              id: permissions
+              run: |
+                  chmod +x $PATH_PERMISSIONS_SCRIPT 
+                  bash $PATH_PERMISSIONS_SCRIPT
+              shell: bash
+
+            # Устанавливаем зависимости
+            - name: Install Modules
+              id: node_modules
+              run: $PATH_INSTALL_DEPS_SCRIPT
+              shell: bash
+
+            # Линтеры
+            - name: Linters
+              id: linters
+              run: $PATH_LINTERS_SCRIPT
+              shell: bash
+
+            # Сборка
+            - name: Build
+              id: build
+              run: $PATH_BUILD_SCRIPT
+              shell: bash
