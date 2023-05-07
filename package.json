@@ -1,0 +1,40 @@
+{
+	"name": "vkinternshipb2b",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc && vite build",
+		"eslint": "eslint src/**/*.{js,ts,jsx,tsx} --no-error-on-unmatched-pattern",
+		"stylelint": "stylelint src/**/*{.scss,.module.scss}",
+		"preview": "vite preview",
+		"prepare": "husky install"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20.1.0",
+		"@types/react": "^18.0.28",
+		"@types/react-dom": "^18.0.11",
+		"@typescript-eslint/eslint-plugin": "^5.57.1",
+		"@typescript-eslint/parser": "^5.57.1",
+		"@vitejs/plugin-react-swc": "^3.0.0",
+		"classnames": "^2.3.2",
+		"eslint": "^8.38.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-react": "^7.32.2",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-plugin-react-refresh": "^0.3.4",
+		"husky": "^8.0.0",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.2",
+		"sass": "^1.59.3",
+		"stylelint": "^15.2.0",
+		"stylelint-config-recommended-scss": "^9.0.1",
+		"stylelint-config-standard-scss": "^7.0.1"
+	}
+}
