@@ -5,5 +5,6 @@ export interface ITextAreaProps
 		TextareaHTMLAttributes<HTMLTextAreaElement>,
 		HTMLTextAreaElement
 	> {
-            
+	initialValue: string | null;
+	handleChange: (newValue: string | null) => unknown;
 }
