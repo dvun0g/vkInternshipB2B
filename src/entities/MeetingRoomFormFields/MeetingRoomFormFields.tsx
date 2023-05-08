@@ -1,4 +1,4 @@
-import { Select } from '@shared/components/Select/Select';
+import { Select } from '@shared/components/Select';
 import { DatePicker } from '@shared/components/DatePicker';
 import { TextArea } from '@shared/components/TextArea';
 

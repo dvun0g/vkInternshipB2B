@@ -5,7 +5,6 @@ export interface ITextProps
 		HTMLAttributes<HTMLSpanElement>,
 		HTMLSpanElement
 	> {
-	className?: string;
 	text: string;
 	color: 'black' | 'gray';
 	size: 'small' | 'medium' | 'large';

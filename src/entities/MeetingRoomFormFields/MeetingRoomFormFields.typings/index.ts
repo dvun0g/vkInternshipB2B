@@ -1,12 +1,16 @@
+type StringField = string | null;
+type DateField = Date | null;
+type Handler<T> = (newValue: T) => void;
+
 export interface IMeetingRoomFormFields {
-    towerValue: string | null;
-    floorValue: string | null;
-    roomValue: string | null;
-    dateValue: Date | null;
-    commentValue: string | null;
-	handlerChangeTower: (newValue: string | null) => void;
-	handlerChangeFloor: (newValue: string | null) => void;
-	handlerChangeRoom: (newValue: string | null) => void;
-	handlerChangeDate: (newValue: Date | null) => void;
-	handlerChangeComment: (newValue: string | null) => void;
+	towerValue: StringField;
+	floorValue: StringField;
+	roomValue: StringField;
+	dateValue: DateField;
+	commentValue: StringField;
+	handlerChangeTower: Handler<StringField>;
+	handlerChangeFloor: Handler<StringField>;
+	handlerChangeRoom: Handler<StringField>;
+	handlerChangeDate: Handler<DateField>;
+	handlerChangeComment: Handler<StringField>;
 }

@@ -6,7 +6,6 @@ export interface IIconProps
 		HTMLImageElement
 	> {
 	size: 'small' | 'medium' | 'large';
-	className?: string;
 }
 
 export type IClassNameSize = IIconProps[keyof Pick<IIconProps, 'size'>][];

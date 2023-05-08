@@ -1,5 +1,5 @@
-type StringField = string | null;
-type DateField = Date | null;
+export type StringField = string | null;
+export type DateField = Date | null;
 
 type Handler<T> = (newValue: T) => void;
 type HandlerVoid = () => void;
