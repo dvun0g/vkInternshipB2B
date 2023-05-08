@@ -14,9 +14,6 @@ export const Icon = function ({ size, className, ...props }: IIconProps) {
 	);
 
 	return (
-		<img
-			className={cn(styles.icon, className, classNameSize)}
-			{...props}
-		></img>
+		<img className={cn(styles.icon, className, classNameSize)} {...props} />
 	);
 };

@@ -5,7 +5,6 @@ export interface IButtonProps
 		ButtonHTMLAttributes<HTMLButtonElement>,
 		HTMLButtonElement
 	> {
-	className?: string;
 	text: string;
 	color: 'primary' | 'secondary';
 	size: 'small' | 'medium' | 'large';

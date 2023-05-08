@@ -9,10 +9,11 @@ export const DatePickerDay = function ({
 	...props
 }: IDatePickerDayProps) {
 	return (
-		<button {...props} className={cn(styles.day, className)}>
+		<button className={cn(styles.day, className)} {...props}>
 			{day}
 		</button>
 	);
 };
 
+// Меняем название компонента в DevTools
 DatePickerDay.displayName = 'DatePickerDay';
