@@ -6,10 +6,12 @@ import styles from './MeetingRoomForm.module.scss';
 
 export const MeetingRoomForm = function () {
 	return (
-		<div className={styles.meetingRoomForm}>
+		<div className={styles.container}>
 			<MeetingRoomFormTitle />
-			<MeetingRoomFormFields />
-			<MeetingRoomFormButtons />
+			<form className={styles.form}>
+				<MeetingRoomFormFields />
+				<MeetingRoomFormButtons />
+			</form>
 		</div>
 	);
 };
