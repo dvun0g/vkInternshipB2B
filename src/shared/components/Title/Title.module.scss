@@ -1,0 +1,50 @@
+@import "@app/styles/variables";
+
+.title {
+	display: inline-block;
+	font-family: Rubik, sans-serif;
+}
+
+.h1 {
+	font-weight: 600;
+	font-size: 34px;
+	line-height: 40px;
+}
+
+.h2 {
+	font-weight: 600;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+.h3 {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.h4 {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.h5 {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.h6 {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.black {
+	color: $text-black-color;
+}
+
+.gray {
+	color: $text-gray-color;
+}
