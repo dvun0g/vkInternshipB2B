@@ -1,0 +1,94 @@
+@import "@app/styles/variables";
+
+// Library Styles
+.react-datepicker__navigation--next, .react-datepicker__navigation--previous {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	position: absolute;
+	top: 2px;
+	padding: 0;
+	border: none;
+	z-index: 1;
+	height: 25px;
+	width: 25px;
+	overflow: hidden;
+}
+
+// Delete Library Icon 
+.react-datepicker__navigation-icon {
+	display: none;
+}
+
+// Custom Styles Navigate
+.react-datepicker__navigation--next {
+	background: url("./DatePicker.assets/arrow-next.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.react-datepicker__navigation--previous {
+	background: url("./DatePicker.assets/arrow-prev.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+// Custom Styles Days
+.react-datepicker__day, .react-datepicker__day--selected {
+	transition: 0.2s ease-in-out;
+}
+
+.react-datepicker__day--selected, .react-datepicker__day--keyboard-selected {
+	background-color: $select-blue-color;
+
+	&:hover {
+		background-color: $select-dark-blue-color;
+	}
+}
+
+// Delete Triangle Container
+.react-datepicker__triangle {
+	display: none;
+}
+
+// Border Color & Background Color
+.react-datepicker  {
+	border: 1px solid $select-border-color;
+	border-radius: 5px;
+}
+
+.react-datepicker__header {
+	border-bottom: 1px solid $select-border-color;
+	background-color: $select-background-color;
+}
+
+.react-datepicker__time-container  {
+	border-left: 1px solid $select-border-color;
+}
+
+// Custom Time
+// Классы нужны обязательно такие чтобы перебить селектор
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item {
+	padding: 7px 5px;
+	height: fit-content;
+}
+
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list li.react-datepicker__time-list-item--selected {
+	background-color: $select-blue-color;
+
+	&:hover {
+		background-color: $select-dark-blue-color;
+	}
+}
+
+// Month First Letter Upper
+.react-datepicker__current-month::first-letter {
+	text-transform: uppercase;
+}
+
+// Clear padding
+.react-datepicker-popper[data-placement^="bottom"] {
+	padding-top: 0;
+}
