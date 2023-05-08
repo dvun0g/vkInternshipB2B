@@ -1,5 +1,6 @@
 import type { ReactDatePickerProps } from 'react-datepicker';
 
 export interface IDatePickerProps extends ReactDatePickerProps {
-	className?: string;
+	initialValue: Date | null;
+	onChange: (newValue: Date | null) => unknown;
 }
