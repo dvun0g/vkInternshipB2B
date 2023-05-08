@@ -1,0 +1,28 @@
+@import "@app/styles/variables";
+
+.text{
+	display: inline;
+}
+
+.black{
+	color: $text-black-color;
+}
+
+.gray{
+	color: $text-gray-color;
+}
+
+.small {
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.medium {
+	font-size: 14px;
+	line-height: 16px;
+}
+
+.large {
+	font-size: 18px;
+	line-height: 20px;
+}
