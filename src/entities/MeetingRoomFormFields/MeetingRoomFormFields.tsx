@@ -7,37 +7,58 @@ import {
 	SELECT_FLOOR,
 	SELECT_MEETING_ROOM_NUMBER,
 } from './MeetingRoomFormFields.constants';
+import type { IMeetingRoomFormFields } from './MeetingRoomFormFields.typings';
 import styles from './MeetingRoomFormFields.module.scss';
 
-export const MeetingRoomFormFields = function () {
+export const MeetingRoomFormFields = function ({
+	towerValue,
+	floorValue,
+	roomValue,
+	dateValue,
+	commentValue,
+	handlerChangeTower,
+	handlerChangeFloor,
+	handlerChangeRoom,
+	handlerChangeDate,
+	handlerChangeComment,
+}: IMeetingRoomFormFields) {
 	return (
 		<div className={styles.container}>
 			<Select
 				className={styles.select}
+				value={towerValue}
+				handleChange={handlerChangeTower}
 				items={SELECT_TOWER}
-				arrow
 				placeholder="Выберите башню"
-			/>
-			<Select
-				className={styles.select}
-				items={SELECT_FLOOR}
 				arrow
-				placeholder="Выберите этаж"
 			/>
 			<Select
 				className={styles.select}
+				handleChange={handlerChangeFloor}
+				value={floorValue}
+				items={SELECT_FLOOR}
+				placeholder="Выберите этаж"
+				arrow
+			/>
+			<Select
+				className={styles.select}
+				handleChange={handlerChangeRoom}
+				value={roomValue}
 				items={SELECT_MEETING_ROOM_NUMBER}
 				arrow
 				placeholder="Выберите переговорную"
 			/>
 			<DatePicker
 				className={styles.datePicker}
+				initialValue={dateValue}
+				onChange={handlerChangeDate}
 				placeholderText="Выберите дату"
-				onChange={() => null}
 			/>
 			<TextArea
 				className={styles.textArea}
+				initialValue={commentValue}
 				placeholder="Оставьте комментарий"
+				handleChange={handlerChangeComment}
 			/>
 		</div>
 	);
