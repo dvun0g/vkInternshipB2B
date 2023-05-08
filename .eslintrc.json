@@ -28,6 +28,7 @@
 		],
 		"import/no-duplicates": "error",
 		"import/no-unresolved": "off",
-		"@typescript-eslint/consistent-type-imports": "error"
+		"@typescript-eslint/consistent-type-imports": "error",
+		"@typescript-eslint/ban-ts-comment": "off"
 	}
 }
