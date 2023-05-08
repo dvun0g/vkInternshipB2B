@@ -1,0 +1,13 @@
+.container {
+	display: flex;
+	flex-direction: column;
+
+	.select {
+		width: 300px;
+		margin-bottom: 15px;
+	}
+
+	.datePicker {
+		margin-bottom: 15px;
+	}
+}

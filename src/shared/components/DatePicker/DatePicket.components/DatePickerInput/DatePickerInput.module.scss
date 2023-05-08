@@ -1,0 +1,22 @@
+@import "@app/styles/variables";
+
+.input {
+	width: 300px;
+	border-radius: 5px;
+	background-color: $select-background-color;
+	border: 1px solid $select-border-color;
+	display: block;
+	font-size: 12px;
+	padding: 8px 5px 8px 10px;
+	transition: 0.3s ease-in-out;
+	color: $text-black-color;
+	min-height: 36px;
+
+	&::placeholder {
+		color: $text-gray-color;
+	}
+
+	&:focus {
+		border: 1px solid $select-blue-color;
+	}
+}

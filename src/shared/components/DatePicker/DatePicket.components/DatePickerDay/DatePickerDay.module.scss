@@ -1,0 +1,10 @@
+@import "@app/styles/variables";
+
+.day {
+	font-family: Rubik, sans-serif;
+	font-size: 12px;
+	line-height: 14px;
+	color: $text-black-color;
+	cursor: inherit;
+	font-weight: 400;
+}
