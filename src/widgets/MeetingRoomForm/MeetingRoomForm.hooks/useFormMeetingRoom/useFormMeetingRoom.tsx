@@ -1,14 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 
-import type { IUseFormMeetingRoom } from './useFormMeetingRoom.typings';
+import type {
+	IUseFormMeetingRoom,
+	StringField,
+	DateField,
+} from './useFormMeetingRoom.typings';
 import { formatData } from '@widgets/MeetingRoomForm/MeetingRoomForm.helpers/formatData/formatData';
 
 export const useFormMeetingRoom: IUseFormMeetingRoom = function () {
-	const [towerField, setTowerField] = useState<string | null>(null);
-	const [floorField, setFloorField] = useState<string | null>(null);
-	const [roomField, setRoomField] = useState<string | null>(null);
-	const [dateField, setDateField] = useState<Date | null>(null);
-	const [commentField, setCommentField] = useState<string | null>(null);
+	const [towerField, setTowerField] = useState<StringField>(null);
+	const [floorField, setFloorField] = useState<StringField>(null);
+	const [roomField, setRoomField] = useState<StringField>(null);
+	const [dateField, setDateField] = useState<DateField>(null);
+	const [commentField, setCommentField] = useState<StringField>(null);
 
 	const [allFieldsCorrect, setAllFieldsCorrect] = useState<boolean>(false);
 
@@ -80,24 +84,21 @@ export const useFormMeetingRoom: IUseFormMeetingRoom = function () {
 		setCommentField(null);
 	}, []);
 
-	const handlerChangeTower = useCallback(function (newValue: string | null) {
+	const handlerChangeTower = useCallback(function (newValue: StringField) {
 		setTowerField(newValue);
 	}, []);
-	const handlerChangeFloor = useCallback(function (newValue: string | null) {
+	const handlerChangeFloor = useCallback(function (newValue: StringField) {
 		setFloorField(newValue);
 	}, []);
-	const handlerChangeRoom = useCallback(function (newValue: string | null) {
+	const handlerChangeRoom = useCallback(function (newValue: StringField) {
 		setRoomField(newValue);
 	}, []);
-	const handlerChangeDate = useCallback(function (newValue: Date | null) {
+	const handlerChangeDate = useCallback(function (newValue: DateField) {
 		setDateField(newValue);
 	}, []);
-	const handlerChangeComment = useCallback(function (
-		newValue: string | null,
-	) {
+	const handlerChangeComment = useCallback(function (newValue: StringField) {
 		setCommentField(newValue);
-	},
-	[]);
+	}, []);
 
 	return {
 		towerField,
