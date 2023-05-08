@@ -11,8 +11,13 @@
 	color: $text-black-color;
 	min-height: 72px;
 	resize: none;
+	transition: 0.3s ease-in-out;
 
 	&::placeholder {
 		color: $text-gray-color;
+	}
+
+	&:focus {
+		border: 1px solid $select-blue-color;
 	}
 }
