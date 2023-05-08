@@ -1,7 +1,9 @@
+import { MeetingRoom } from '@pages/MeetingRoom';
+
 export const App = function () {
 	return (
-		<div>
-			<h1>App</h1>
-		</div>
+		<>
+			<MeetingRoom />
+		</>
 	);
 };
