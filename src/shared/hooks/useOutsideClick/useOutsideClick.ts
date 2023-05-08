@@ -8,7 +8,7 @@ import type { IHandler, IRef, IMouseEvent } from './useOutsideClick.typings';
  * @param handler
  * @param mouseEvent
  */
-const useOnClickOutside = function <T extends HTMLElement = HTMLElement>(
+export const useOnClickOutside = function <T extends HTMLElement = HTMLElement>(
 	ref: IRef<T>,
 	handler: IHandler,
 	mouseEvent: IMouseEvent,
@@ -42,5 +42,3 @@ const useOnClickOutside = function <T extends HTMLElement = HTMLElement>(
 		};
 	}, [ref, handler]);
 };
-
-export default useOnClickOutside;
