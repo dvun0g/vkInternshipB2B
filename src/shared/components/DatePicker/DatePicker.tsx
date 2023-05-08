@@ -1,3 +1,4 @@
+import { useCallback } from 'react';
 import DatePicker from 'react-datepicker';
 import ru from 'date-fns/locale/ru';
 
@@ -17,21 +18,28 @@ export const DatePickerCustom = function ({
 }: IDatePickerProps) {
 	const initialDate = new Date();
 
+	const weekDayClassName = useCallback(() => styles.weekDay, []);
+	const timeClassName = useCallback(() => styles.time, []);
+	const renderDayContents = useCallback(
+		(day: number) => <DatePickerDay day={day} />,
+		[],
+	);
+
 	return (
 		<DatePicker
-			{...props}
 			dateFormat="dd-MM-yyyy"
 			timeCaption="Время"
 			locale={ru}
 			timeIntervals={30}
 			minDate={initialDate}
 			customInput={<DatePickerInput />}
-			showTimeSelect
 			selected={initialValue}
 			onChange={onChange}
-			renderDayContents={(day) => <DatePickerDay day={day} />}
-			weekDayClassName={() => styles.weekDay}
-			timeClassName={() => styles.time}
+			renderDayContents={renderDayContents}
+			weekDayClassName={weekDayClassName}
+			timeClassName={timeClassName}
+			showTimeSelect
+			{...props}
 		/>
 	);
 };

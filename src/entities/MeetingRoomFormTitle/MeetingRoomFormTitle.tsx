@@ -1,19 +1,13 @@
-import cn from 'classnames';
-
 import { Icon } from '@shared/components/Icon';
-
-import type { IMeetingRoomFormTitleProps } from './MeetingRoomFormTitle.typings';
-import vk from './MeetingRoomFormTitle.assets/vk.svg';
-import styles from './MeetingRoomFormTitle.module.scss';
 import { Title } from '@shared/components/Title';
 import { Text } from '@shared/components/Text';
 
-export const MeetingRoomFormTitle = function ({
-	className,
-	...props
-}: IMeetingRoomFormTitleProps) {
+import styles from './MeetingRoomFormTitle.module.scss';
+import vk from './MeetingRoomFormTitle.assets/vk.svg';
+
+export const MeetingRoomFormTitle = function () {
 	return (
-		<div className={cn(styles.container, className)} {...props}>
+		<div className={styles.container}>
 			<Icon className={styles.icon} src={vk} alt="VK" size="large" />
 			<Title
 				className={styles.title}

@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { ChangeEvent } from 'react';
 
-import type { IUseTextArea } from './useTextArea.typings';
+import type { IUseTextArea, StringField } from './useTextArea.typings';
 
 export const useTextArea: IUseTextArea = function (initialValue, onChange) {
-	const [value, setValue] = useState<string | null>(initialValue);
+	const [value, setValue] = useState<StringField>(initialValue);
 
 	const handlerChange = useCallback(function (
 		event: ChangeEvent<HTMLTextAreaElement>,

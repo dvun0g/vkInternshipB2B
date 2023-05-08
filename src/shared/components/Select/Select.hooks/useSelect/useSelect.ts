@@ -6,13 +6,13 @@ export const useSelect: IUseSelect = function (value, onChange, items) {
 	const [selected, setSelected] = useState<string | null>(value);
 	const [visited, setVisited] = useState<boolean>(false);
 
-	const handlerChangeVisited = function () {
+	const handlerChangeVisited = useCallback(function () {
 		setVisited((prev) => !prev);
-	};
+	}, []);
 
-	const handlerClose = function () {
+	const handlerClose = useCallback(function () {
 		setVisited(false);
-	};
+	}, []);
 
 	const handlerChange = useCallback(function (index: number) {
 		const newValue = items[index];

@@ -1,10 +1,12 @@
 import type { DetailedHTMLProps, HTMLAttributes } from 'react';
 
+type StringField = string | null;
+
 export interface ISelectProps
 	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
-	value: string | null;
+	value: StringField;
 	items: string[];
-	handleChange: (value: string | null) => unknown;
+	handleChange: (value: StringField) => unknown;
 	arrow?: boolean;
 	placeholder?: string;
 }

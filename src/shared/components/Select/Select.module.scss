@@ -8,15 +8,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		background-color: $select-background-color;
-		border: 1px solid $select-border-color;
+		background-color: $white-dark-color;
+		border: 1px solid $gray-color;
 		border-radius: 5px;
 		padding: 8px 5px 8px 10px;
 		transition: 0.3s ease-in-out;
 	}
 
 	.selectActive {
-		border: 1px solid $select-blue-color;
+		border: 1px solid $blue-primary-color;
 	}
 
 	.list {
@@ -30,8 +30,8 @@
 		left: 0;
 		right: 0;
 		flex-direction: column;
-		background-color: $select-background-color;
-		border: 1px solid $select-border-color;
+		background-color: $white-dark-color;
+		border: 1px solid $gray-color;
 		border-radius: 5px;
 		min-width: fit-content;
 		min-height: fit-content;
@@ -50,20 +50,20 @@
 			}
 
 			&:hover {
-				background-color: $select-border-color;
+				background-color: $gray-color;
 			}
 		}
 
 		.listItemSelected {
-			background-color: $select-blue-color;
+			background-color: $blue-primary-color;
 			transition: 0.3s ease-in-out;
 			
 			.listItemText {
-				color: $text-black-color;
+				color: $black-color;
 			}
 
 			&:hover {
-				background-color: $select-dark-blue-color;
+				background-color: $blue-dark-primary-color;
 			}
 		}
 	}

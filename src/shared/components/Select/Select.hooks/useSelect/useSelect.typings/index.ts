@@ -1,12 +1,13 @@
 type OnChange = (newValue: string | null) => unknown;
 type VoidFunction = () => void;
+type StringField = string | null;
 
 export type IUseSelect = (
-	value: string | null,
+	value: StringField,
 	onChange: OnChange,
 	items: string[],
 ) => {
-	selected: string | null;
+	selected: StringField;
 	visited: boolean;
 	handlerChange: (index: number) => void;
 	handlerClose: VoidFunction;
