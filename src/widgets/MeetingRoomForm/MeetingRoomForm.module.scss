@@ -1,0 +1,12 @@
+@import "@app/styles/variables";
+
+.meetingRoomForm {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 35px 65px 65px;
+	background-color: $form-background-color;
+	gap: 18px;
+	border-radius: 15px;
+	border: 1px solid $form-border-color;
+}
